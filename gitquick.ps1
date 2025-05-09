@@ -1,3 +1,5 @@
+#This is a powershell script for easily running the git commands to update your repo
+
 param ([string]$msg = "")
 
 if ($msg -eq "") {
