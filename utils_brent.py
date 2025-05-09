@@ -12,9 +12,6 @@ It includes a function to read the byline aloud using pyttsx3.
 
 Author: Brent Ramirez
 
-TODO: Change the module name in this opening docstring to use your name instead of case. 
-TODO: Change the author in this opening docstring to your name or alias. 
-TODO: Remove these TODOS after you have completed them.
 """
 
 #####################################
@@ -45,47 +42,40 @@ logger.info("Logger loaded.")
 #####################################
 
 # declare a boolean variable (has a value True or False)
-# TODO: Add another or replace this with your own boolean variable
-has_international_clients: bool = True
+is_profitable: bool = True
 
 # declare an integer variable 
-# TODO: Add or replace this with your own integer variable
-years_in_operation: int = 10
+number_of_clients: int = 50
 
 # declare a floating point variable
-# TODO: Add or replace this with your own floating point variable
-average_client_satisfaction: float = 4.7
+average_client_review_rating: float = 4.9
 
 # declare a list of strings
-# TODO: Add or replace this with your own list  
-skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
+services_offered: list = ["Data Mining", "Web Scraping", "Data Analytics"]
 
 # declare a list of numbers so we can illustrate statistics skills
 # TODO: Add or replace this with your own numeric list  
-client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+anonymous_employee_salaries: list = [250000, 120000, 90000, 110000]
 
 # Calculate basic statistics using built-in Python functions and the statistics module
-# TODO: Replace these variable names with the variable name of your own numeric list
-min_score: float = min(client_satisfaction_scores)  
-max_score: float = max(client_satisfaction_scores)  
-mean_score: float = statistics.mean(client_satisfaction_scores)  
-stdev_score: float = statistics.stdev(client_satisfaction_scores)
+min_salary: float = min(anonymous_employee_salaries)  
+max_salary: float = max(anonymous_employee_salaries)  
+mean_salary: float = statistics.mean(anonymous_employee_salaries)  
+stdev_salary: float = statistics.stdev(anonymous_employee_salaries)
 
 # Use a Python formatted string (f-string) to show information
-# TODO: Modify the text in the byline to fit your information
-# TODO: Modify the variables in the byline to use your variable names
 byline: str = f"""
 ---------------------------------------------------------
-Stellar Analytics: Delivering Professional Insights
+AnaLITics -- Shining a Light on Your Data
 ---------------------------------------------------------
-Has International Clients:  {has_international_clients}
-Years in Operation:         {years_in_operation}
-Skills Offered:             {skills_offered}
-Client Satisfaction Scores: {client_satisfaction_scores}
-Minimum Satisfaction Score: {min_score}
-Maximum Satisfaction Score: {max_score}
-Mean Satisfaction Score: {mean_score:.2f}
-Standard Deviation of Satisfaction Scores: {stdev_score:.2f}
+Is profitable:  {is_profitable}
+Number of Clients:         {number_of_clients}
+Services Offered:             {services_offered}
+Average Client Review Rating: {average_client_review_rating}
+Minimum Employee Salary: {min_salary}
+Maximum Employee Salary: {max_salary}
+Mean Employee Salary: {mean_salary:.2f}
+Standard Deviation of Employee Salaries: {stdev_salary:.2f}
 """
 
 #####################################
@@ -142,7 +132,7 @@ def main() -> None:
     loguru.logger.info("Byline:\n" + get_byline())
 
     # Uncomment to hear it read aloud:
-    read_byline_aloud()
+    #read_byline_aloud()
 
     print("END main() in utils_case.py")
     loguru.logger.info("END main() in utils_case.py")
